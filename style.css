@@ -137,6 +137,16 @@ button.secondary {
   text-align: center;
 }
 
+.warning {
+  margin: 12px auto 0;
+  padding: 10px 14px;
+  border-radius: 10px;
+  background: #fbeedd;
+  color: #7a4a12;
+  font-size: 14px;
+  text-align: center;
+}
+
 /* ---------- Color picker ---------- */
 
 dialog {
