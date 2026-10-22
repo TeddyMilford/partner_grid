@@ -1,0 +1,51 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>How I See You</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <main>
+    <div id="grid" class="grid"></div>
+
+    <div class="actions">
+      <button id="export" type="button">Export PNG</button>
+      <button id="clear" type="button" class="secondary">Clear</button>
+    </div>
+
+    <p class="hint">Tap a square to add a photo. Drag a photo to reposition it.</p>
+  </main>
+
+  <dialog id="color-dialog">
+    <form method="dialog" class="color-picker">
+      <h2>Pick a color</h2>
+
+      <div id="wheel-wrap" class="wheel-wrap">
+        <canvas id="wheel" width="600" height="600"></canvas>
+        <div id="wheel-marker" class="wheel-marker"></div>
+      </div>
+
+      <label class="brightness">
+        Brightness
+        <input id="brightness" type="range" min="0" max="100" value="100">
+      </label>
+
+      <div class="color-row">
+        <div id="swatch" class="swatch"></div>
+        <input id="hex" type="text" maxlength="7" spellcheck="false" autocomplete="off">
+      </div>
+
+      <div class="dialog-actions">
+        <button value="cancel" class="secondary">Cancel</button>
+        <button value="done">Done</button>
+      </div>
+    </form>
+  </dialog>
+
+  <input id="file-input" type="file" accept="image/*" hidden>
+
+  <script src="app.js"></script>
+</body>
+</html>
